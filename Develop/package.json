@@ -12,7 +12,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "apollow-client": "^2.6.10",
+    "graphql": "^15.5.2",
+  },
   "devDependencies": {
+  
     "concurrently": "^5.1.0"
   }
 }
