@@ -6,7 +6,7 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 const { type } = require('os');
-// const routes = require('./routes');
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -20,7 +20,6 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/graphql", expressMiddleware(server, {context: authMiddleware}));
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {

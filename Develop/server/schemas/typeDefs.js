@@ -1,6 +1,6 @@
-const { GraphQL} = require('graphql');
+const { gql } = require('apollo-server-express');
 
-const typeDefs = GraphQL`
+const typeDefs = gql`
     type User {
         _id: ID
         username: String
